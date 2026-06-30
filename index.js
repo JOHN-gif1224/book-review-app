@@ -11,6 +11,12 @@ const PORT = 5000;
 // Sans ça, req.body serait "undefined"
 app.use(express.json());
 
+// On importe le routeur des routes générale
+const generalRoutes = require("./routes/general");
+
+// On monte ce routeur sur le préfixe "/"
+app.use("/", generalRoutes);
+
 // ROUTE DE TEST: c'est quand on fait un GET sur "/"
 app.get("/", (req, res) => {
     res.send("Bienvenu sur l'API Book Review !");
