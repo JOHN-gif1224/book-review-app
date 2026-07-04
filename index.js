@@ -41,5 +41,5 @@ app.get("/", (req, res) => {
 
 // Démarrage du serveur, qui écoute sur le PORT
 app.listen(PORT, () => {
-  console.log(`Serveur démarrer sur http://localhost:${PORT}`);
+  console.log(`Le serveur démarre sur http://localhost:${PORT}`);
 });
